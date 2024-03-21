@@ -1,5 +1,5 @@
 import react from "react";
-import gym_icon from "../../public/Icon_1.png";
+import gym_icon from "public/Icon_1.png";
 import Image from "next/image";
 
 export default function SectionBrief({

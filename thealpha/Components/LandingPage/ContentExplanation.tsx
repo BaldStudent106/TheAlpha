@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import gym_image from "../../public/gym_image_2.jpg";
+import gym_image from "public/gym_image_2.jpg";
 
 export default function ContentExplanation({
   order,

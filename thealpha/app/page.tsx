@@ -1,29 +1,38 @@
+import Link from "next/link";
 import Image from "next/image";
-import gym_image from "../public/gym_image_1.jpg";
-import SectionBrief from "./Components/SectionBrief";
-import ContentExplanation from "./Components/ContentExplanation";
+import gym_image from "public/gym_image_1.jpg";
+import SectionBrief from "Components/LandingPage/SectionBrief";
+import ContentExplanation from "Components/LandingPage/ContentExplanation";
 
 export default function Home() {
   return (
     <div className="overflow-y-auto flex flex-col ">
       <div className="h-screen">
         <div className="h-3/5 relative">
-          <div className="z-20 flex justify-evenly flex-col items-center h-full"> 
+          <div className="z-20 flex justify-evenly flex-col items-center h-full">
             <div className="w-3/5">
-              <h2 className="z-10 text-white font-extrabold text-5xl text-wrap text-center leading-loose">Do you Want To Become A Better Version Of Yourself?</h2>
+              <h2 className="z-10 text-white font-extrabold text-5xl text-wrap text-center leading-loose">
+                Do you Want To Become A Better Version Of Yourself?
+              </h2>
             </div>
             <div>
-              <h3 className="z-10 text-white font-bold text-4xl">Use Alpha To Become 1% Better Each Day</h3>
+              <h3 className="z-10 text-white font-bold text-4xl">
+                Join Us Now To Become 1% Better Every Day
+              </h3>
             </div>
-            <p className="font-bold z-20 bg-green-800 rounded-3xl text-white p-4">Log In / Register</p>
+            <Link
+              className="font-bold z-20 bg-green-800 rounded-3xl text-white p-4"
+              href={"/SignIn/Register"}
+            >
+              Log In / Register
+            </Link>
           </div>
           <Image
             src={gym_image}
             alt="This is a photo showing two ppl in a gym"
             priority
             placeholder="blur"
-            layout="fill"
-            className="h-full w-full -z-10 shrink-0 grow"
+            className="w-full -z-10 h-full absolute top-0 left-0"
           ></Image>
         </div>
         <div className="h-2/5 bg-white justify-center w-screen flex">
